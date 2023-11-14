@@ -1,0 +1,116 @@
+CRAWL->EXCEL->stage->nds->dds-> PI-> chart(biểu đồ) 
+
+source->stage
+--> source có gì thì giữ nấy
+--> stage --> tạo bảng trước load vào --> load vào nds y chang nhau 
+
+
+
+-- source to stage
+
+-- database có 1 cái stage-- các bảng
+source -- stage (k cần để ý load data)-- truncate stage trước-- xóa all dữ liệu trong bảng stage
+
+LSET - last succes extract
+CET - current extract
+
+
+*Tín nguyễn
+exccel --> source (ngày tạo , ngày cập nhật) -->  stage(y chang source, ngày tạo , ngày cập nhật) khi nào mà stage chạy thì nó chỉ đọc 
+những dòng nào mà source cập nhật hoặc xóa hoặc thêm mới
+stage --> nds (SK --(tự tăng) -- SourceK(ID source) -- NK(kháo chính trong record trong stage)
+
+
+* cách của mình mà k phải tạo exccel --> source -- giữ hết luôn 
+source --> stage có thể k lấy cột
+stagev--nds có thể k lấy cột
+
+excel --> source
+
+Error: 0xC0209029 at SOURCE TO PRODUCT SOURCE, OLE DB Destination [2]: SSIS Error Code DTS_E_INDUCEDTRANSFORMFAILUREONERROR.  The "OLE DB Destination.Inputs[OLE DB Destination Input]" failed because error code 0xC020907B occurred, and the error row disposition on "OLE DB Destination.Inputs[OLE DB Destination Input]" specifies failure on error. An error occurred on the specified object of the specified component.  There may be error messages posted before this with more information about the failure.
+Error: 0xC0047022 at SOURCE TO PRODUCT SOURCE, SSIS.Pipeline: SSIS Error Code DTS_E_PROCESSINPUTFAILED.  The ProcessInput method on component "OLE DB Destination" (2) failed with error code 0xC0209029 while processing input "OLE DB Destination Input" (15). The identified component returned an error from the ProcessInput method. The error is specific to the component, but the error is fatal and will cause the Data Flow task to stop running.  There may be error messages posted before this with more information about the failure.
+
+
+
+-- create procedure
+set ansi_nulls on
+go
+set quoted_identifier on
+go
+
+CREATE PROC [DBO].[UPDATEPRODUCTPROC]
+	@ProductID INT,
+	@BrandID INT ,
+	@CategoryID INT ,
+	@StoreID INT ,
+	@DanhmucID INT ,
+	@ProductName NVARCHAR(500),
+	@ShortDescription NVARCHAR(4000),
+	@Price INT ,
+	@OriginalPrice INT ,
+	@Discount INT ,
+	@DiscountRate INT ,
+	@QuantitySold INT ,
+	@Rating FLOAT ,
+	@ReviewCount INT ,
+	@CreateDay DATETIME ,
+	@UpdateDay DATETIME
+AS 
+BEGIN
+	UPDATE PRODUCT_STAGE 
+	SET 
+	BrandID= @BrandID,
+	CategoryID = @CategoryID,
+	StoreID = @StoreID  ,
+	DanhmucID=  @DanhmucID  ,
+	ProductName=  @ProductName,
+	ShortDescription=  @ShortDescription,
+	Price=  @Price  ,
+	OriginalPrice= @OriginalPrice  ,
+	Discount= @Discount  ,
+	DiscountRate= @DiscountRate  ,
+	QuantitySold= @QuantitySold  ,
+	Rating= @Rating,
+	ReviewCount= @ReviewCount  ,
+	CreateDay= @CreateDay  ,
+	UpdateDay= @UpdateDay 
+	WHERE ProductID = @ProductID
+	IF @@ROWCOUNT = 0
+	BEGIN
+		INSERT INTO PRODUCT_STAGE VALUES (@ProductID,
+	@BrandID  ,
+	@CategoryID  ,
+	@StoreID  ,
+	@DanhmucID  ,
+	@ProductName ,
+	@ShortDescription,
+	@Price  ,
+	@OriginalPrice  ,
+	@Discount  ,
+	@DiscountRate  ,
+	@QuantitySold  ,
+	@Rating  ,
+	@ReviewCount  ,
+	@CreateDay,
+	@UpdateDay)
+	END
+END
+
+
+SELECT        CategorySK, CategoryNK
+FROM            dbo.CATEGORY_NDS
+WHERE        (SourceID = 1)
+
+
+SELECT        DirectorySK, DirectoryNK
+FROM            dbo.DIRECTORY_NDS
+WHERE        (SourceID = 1)
+
+
+SELECT        StoreSK, StoreNK
+FROM            dbo.STORE_NDS
+WHERE        (SourceID = 1)
+
+SELECT        BrandSK, BrandNK
+FROM            dbo.BRAND_NDS
+WHERE        (SourceID = 1)
