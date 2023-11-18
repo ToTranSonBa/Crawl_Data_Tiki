@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="68"
-  DTS:VersionGUID="{445B6619-1E08-47E0-B93D-CF5130C51B11}">
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{2D97C8D7-589B-41BC-9BFB-F17F6A654678}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -70,7 +70,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="LSET">
       <DTS:VariableValue
-        DTS:DataType="7">11/13/2023 5:00:52 PM</DTS:VariableValue>
+        DTS:DataType="7">11/13/2023 5:00:00 PM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -779,7 +779,7 @@ WHERE BrandID = ?</property>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{C66BFDA6-EC86-4E44-9807-5BD244C61A7A}"
-              SQLTask:SqlStatementSource="UPDATE       dbo.Data_Flow&#xA;SET LSET = CET&#xA;WHERE TableName = 'PRODUCT'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="UPDATE       dbo.Data_Flow&#xA;SET LSET = CET&#xA;WHERE TableName = 'BRAND'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -5151,9 +5151,7 @@ WHERE        (CreateDay &gt;= ?) AND (CreateDay &lt; ?) OR
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
