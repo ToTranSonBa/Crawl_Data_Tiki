@@ -242,6 +242,7 @@ select * from CATEGORY_SOURCE
 select * from DIRECTORY_SOURCE
 select * from STORE_SOURCE
 
+
 truncate table BRAND_SOURCE
 truncate table PRODUCT_SOURCE
 truncate table CATEGORY_SOURCE

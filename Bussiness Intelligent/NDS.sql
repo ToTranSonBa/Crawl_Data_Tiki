@@ -163,8 +163,9 @@ ON [PRIMARY]
 GO
 
 
-select * from PRODUCT_NDS
 select * from BRAND_NDS
+select * from PRODUCT_NDS
+
 select * from CATEGORY_NDS
 select * from DIRECTORY_NDS
 select * from STORE_NDS

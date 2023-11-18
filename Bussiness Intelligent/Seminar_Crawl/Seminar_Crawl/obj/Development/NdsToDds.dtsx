@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{3507BE47-545A-403B-A8A9-92FC842BECD4}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{3ADD01E9-C253-497C-A97B-D82F22EA1CAA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5264,6 +5264,424 @@ ORDER BY
                   </outputs>
                 </component>
                 <component
+                  refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="PRODUCT_NDS"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[PRODUCT_NDS]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.SEMINAR_NDS]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.SEMINAR_NDS]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductSK]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ProductSK]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductSK]"
+                          name="ProductSK"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductNK]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ProductNK]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductNK]"
+                          name="ProductNK"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[SourceID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[SourceID]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[SourceID]"
+                          name="SourceID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[BrandID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[BrandID]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[BrandID]"
+                          name="BrandID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[CategoryID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[CategoryID]"
+                          name="CategoryID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[StoreID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[StoreID]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[StoreID]"
+                          name="StoreID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[DanhmucID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[DanhmucID]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[DanhmucID]"
+                          name="DanhmucID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ProductName]"
+                          length="500"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductName]"
+                          name="ProductName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ShortDescription]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ShortDescription]"
+                          length="4000"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ShortDescription]"
+                          name="ShortDescription"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Price]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[Price]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Price]"
+                          name="Price"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[OriginalPrice]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[OriginalPrice]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[OriginalPrice]"
+                          name="OriginalPrice"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Discount]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[Discount]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Discount]"
+                          name="Discount"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[DiscountRate]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[DiscountRate]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[DiscountRate]"
+                          name="DiscountRate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[QuantitySold]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[QuantitySold]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[QuantitySold]"
+                          name="QuantitySold"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Rating]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Rating]"
+                          name="Rating"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ReviewCount]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ReviewCount]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ReviewCount]"
+                          name="ReviewCount"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[CreateDay]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[CreateDay]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[CreateDay]"
+                          name="CreateDay"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[UpdateDay]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdateDay]"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[UpdateDay]"
+                          name="UpdateDay"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ProductSK]"
+                          dataType="i4"
+                          name="ProductSK" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ProductNK]"
+                          dataType="i4"
+                          name="ProductNK" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[SourceID]"
+                          dataType="i4"
+                          name="SourceID" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[BrandID]"
+                          dataType="i4"
+                          name="BrandID" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
+                          dataType="i4"
+                          name="CategoryID" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[StoreID]"
+                          dataType="i4"
+                          name="StoreID" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[DanhmucID]"
+                          dataType="i4"
+                          name="DanhmucID" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ProductName]"
+                          dataType="wstr"
+                          length="500"
+                          name="ProductName" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ShortDescription]"
+                          dataType="wstr"
+                          length="4000"
+                          name="ShortDescription" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[Price]"
+                          dataType="i4"
+                          name="Price" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[OriginalPrice]"
+                          dataType="i4"
+                          name="OriginalPrice" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[Discount]"
+                          dataType="i4"
+                          name="Discount" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[DiscountRate]"
+                          dataType="i4"
+                          name="DiscountRate" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[QuantitySold]"
+                          dataType="i4"
+                          name="QuantitySold" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
+                          dataType="r8"
+                          name="Rating" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[ReviewCount]"
+                          dataType="i4"
+                          name="ReviewCount" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[CreateDay]"
+                          dataType="dbTimeStamp"
+                          name="CreateDay" />
+                        <externalMetadataColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdateDay]"
+                          dataType="dbTimeStamp"
+                          name="UpdateDay" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ProductSK]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ProductSK]"
+                          name="ProductSK" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ProductNK]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ProductNK]"
+                          name="ProductNK" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[SourceID]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[SourceID]"
+                          name="SourceID" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[BrandID]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[BrandID]"
+                          name="BrandID" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
+                          name="CategoryID" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[StoreID]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[StoreID]"
+                          name="StoreID" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[DanhmucID]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[DanhmucID]"
+                          name="DanhmucID" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ProductName]"
+                          dataType="wstr"
+                          length="500"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ProductName]"
+                          name="ProductName" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ShortDescription]"
+                          dataType="wstr"
+                          length="4000"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ShortDescription]"
+                          name="ShortDescription" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[Price]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[Price]"
+                          name="Price" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[OriginalPrice]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[OriginalPrice]"
+                          name="OriginalPrice" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[Discount]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[Discount]"
+                          name="Discount" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[DiscountRate]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[DiscountRate]"
+                          name="DiscountRate" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[QuantitySold]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[QuantitySold]"
+                          name="QuantitySold" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[Rating]"
+                          dataType="r8"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[Rating]"
+                          name="Rating" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ReviewCount]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ReviewCount]"
+                          name="ReviewCount" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[CreateDay]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[CreateDay]"
+                          name="CreateDay" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[UpdateDay]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[UpdateDay]"
+                          name="UpdateDay" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Slowly Changing Dimension"
                   componentClassID="Microsoft.SCD"
                   contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
@@ -5477,7 +5895,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[ProductSK]"
                           cachedDataType="i4"
                           cachedName="ProductSK"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductSK]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductSK]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5493,7 +5911,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[ProductNK]"
                           cachedDataType="i4"
                           cachedName="ProductNK"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductNK]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductNK]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5509,7 +5927,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[SourceID]"
                           cachedDataType="i4"
                           cachedName="SourceID"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[SourceID]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[SourceID]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5525,7 +5943,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[BrandID]"
                           cachedDataType="i4"
                           cachedName="BrandID"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[BrandID]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[BrandID]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5541,7 +5959,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[CategoryID]"
                           cachedDataType="i4"
                           cachedName="CategoryID"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[CategoryID]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[CategoryID]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5557,7 +5975,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[StoreID]"
                           cachedDataType="i4"
                           cachedName="StoreID"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[StoreID]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[StoreID]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5573,7 +5991,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[DanhmucID]"
                           cachedDataType="i4"
                           cachedName="DanhmucID"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[DanhmucID]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[DanhmucID]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5590,7 +6008,7 @@ ORDER BY
                           cachedDataType="wstr"
                           cachedLength="500"
                           cachedName="ProductName"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductName]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductName]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5607,7 +6025,7 @@ ORDER BY
                           cachedDataType="wstr"
                           cachedLength="4000"
                           cachedName="ShortDescription"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ShortDescription]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ShortDescription]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5623,7 +6041,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[Price]"
                           cachedDataType="i4"
                           cachedName="Price"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Price]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Price]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5639,7 +6057,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[OriginalPrice]"
                           cachedDataType="i4"
                           cachedName="OriginalPrice"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[OriginalPrice]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[OriginalPrice]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5655,7 +6073,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[Discount]"
                           cachedDataType="i4"
                           cachedName="Discount"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Discount]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Discount]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5671,7 +6089,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[DiscountRate]"
                           cachedDataType="i4"
                           cachedName="DiscountRate"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[DiscountRate]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[DiscountRate]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5687,7 +6105,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[QuantitySold]"
                           cachedDataType="i4"
                           cachedName="QuantitySold"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[QuantitySold]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[QuantitySold]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5703,7 +6121,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[Rating]"
                           cachedDataType="r8"
                           cachedName="Rating"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Rating]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Rating]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5719,7 +6137,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[ReviewCount]"
                           cachedDataType="i4"
                           cachedName="ReviewCount"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ReviewCount]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ReviewCount]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5735,7 +6153,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[CreateDay]"
                           cachedDataType="dbTimeStamp"
                           cachedName="CreateDay"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[CreateDay]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[CreateDay]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5751,7 +6169,7 @@ ORDER BY
                           refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input].Columns[UpdateDay]"
                           cachedDataType="dbTimeStamp"
                           cachedName="UpdateDay"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[UpdateDay]">
+                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[UpdateDay]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -5783,7 +6201,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductSK]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductSK]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5796,7 +6214,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductNK]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductNK]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5809,7 +6227,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[SourceID]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[SourceID]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5823,7 +6241,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[BrandID]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[BrandID]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5836,7 +6254,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[CategoryID]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[CategoryID]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5849,7 +6267,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[StoreID]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[StoreID]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5862,7 +6280,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[DanhmucID]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[DanhmucID]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5876,7 +6294,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductName]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ProductName]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5890,7 +6308,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ShortDescription]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ShortDescription]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5903,7 +6321,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Price]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Price]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5916,7 +6334,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[OriginalPrice]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[OriginalPrice]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5929,7 +6347,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Discount]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Discount]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5942,7 +6360,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[DiscountRate]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[DiscountRate]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5955,7 +6373,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[QuantitySold]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[QuantitySold]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5968,7 +6386,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Rating]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[Rating]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5981,7 +6399,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ReviewCount]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[ReviewCount]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -5994,7 +6412,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[CreateDay]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[CreateDay]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -6007,7 +6425,7 @@ ORDER BY
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[UpdateDay]}</property>
+                              name="SortColumnId">#{Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output].Columns[UpdateDay]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -8028,424 +8446,6 @@ ORDER BY
                     </output>
                   </outputs>
                 </component>
-                <component
-                  refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS"
-                  componentClassID="Microsoft.OLEDBSource"
-                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-                  description="OLE DB Source"
-                  name="TOTALREVENUE_DDS"
-                  usesDispositions="true"
-                  version="7">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dbo].[PRODUCT_NDS]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.String"
-                      description="The variable that contains the SQL command to be executed."
-                      name="SqlCommandVariable"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">0</property>
-                    <property
-                      dataType="System.String"
-                      description="The mappings between the parameters in the SQL command and variables."
-                      name="ParameterMapping"></property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[LocalHost.SEMINAR_NDS]"
-                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.SEMINAR_NDS]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <outputs>
-                    <output
-                      refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output]"
-                      name="OLE DB Source Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductSK]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ProductSK]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductSK]"
-                          name="ProductSK"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductNK]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ProductNK]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductNK]"
-                          name="ProductNK"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[SourceID]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[SourceID]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[SourceID]"
-                          name="SourceID"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[BrandID]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[BrandID]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[BrandID]"
-                          name="BrandID"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[CategoryID]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[CategoryID]"
-                          name="CategoryID"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[StoreID]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[StoreID]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[StoreID]"
-                          name="StoreID"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[DanhmucID]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[DanhmucID]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[DanhmucID]"
-                          name="DanhmucID"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductName]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ProductName]"
-                          length="500"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ProductName]"
-                          name="ProductName"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ShortDescription]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ShortDescription]"
-                          length="4000"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ShortDescription]"
-                          name="ShortDescription"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Price]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[Price]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Price]"
-                          name="Price"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[OriginalPrice]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[OriginalPrice]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[OriginalPrice]"
-                          name="OriginalPrice"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Discount]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[Discount]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Discount]"
-                          name="Discount"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[DiscountRate]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[DiscountRate]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[DiscountRate]"
-                          name="DiscountRate"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[QuantitySold]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[QuantitySold]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[QuantitySold]"
-                          name="QuantitySold"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Rating]"
-                          dataType="r8"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[Rating]"
-                          name="Rating"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ReviewCount]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ReviewCount]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[ReviewCount]"
-                          name="ReviewCount"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[CreateDay]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[CreateDay]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[CreateDay]"
-                          name="CreateDay"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[UpdateDay]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[UpdateDay]"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].Columns[UpdateDay]"
-                          name="UpdateDay"
-                          truncationRowDisposition="FailComponent" />
-                      </outputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ProductSK]"
-                          dataType="i4"
-                          name="ProductSK" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ProductNK]"
-                          dataType="i4"
-                          name="ProductNK" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[SourceID]"
-                          dataType="i4"
-                          name="SourceID" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[BrandID]"
-                          dataType="i4"
-                          name="BrandID" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
-                          dataType="i4"
-                          name="CategoryID" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[StoreID]"
-                          dataType="i4"
-                          name="StoreID" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[DanhmucID]"
-                          dataType="i4"
-                          name="DanhmucID" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ProductName]"
-                          dataType="wstr"
-                          length="500"
-                          name="ProductName" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ShortDescription]"
-                          dataType="wstr"
-                          length="4000"
-                          name="ShortDescription" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[Price]"
-                          dataType="i4"
-                          name="Price" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[OriginalPrice]"
-                          dataType="i4"
-                          name="OriginalPrice" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[Discount]"
-                          dataType="i4"
-                          name="Discount" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[DiscountRate]"
-                          dataType="i4"
-                          name="DiscountRate" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[QuantitySold]"
-                          dataType="i4"
-                          name="QuantitySold" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[Rating]"
-                          dataType="r8"
-                          name="Rating" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[ReviewCount]"
-                          dataType="i4"
-                          name="ReviewCount" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[CreateDay]"
-                          dataType="dbTimeStamp"
-                          name="CreateDay" />
-                        <externalMetadataColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output].ExternalColumns[UpdateDay]"
-                          dataType="dbTimeStamp"
-                          name="UpdateDay" />
-                      </externalMetadataColumns>
-                    </output>
-                    <output
-                      refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output]"
-                      isErrorOut="true"
-                      name="OLE DB Source Error Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ProductSK]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ProductSK]"
-                          name="ProductSK" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ProductNK]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ProductNK]"
-                          name="ProductNK" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[SourceID]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[SourceID]"
-                          name="SourceID" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[BrandID]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[BrandID]"
-                          name="BrandID" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
-                          name="CategoryID" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[StoreID]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[StoreID]"
-                          name="StoreID" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[DanhmucID]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[DanhmucID]"
-                          name="DanhmucID" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ProductName]"
-                          dataType="wstr"
-                          length="500"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ProductName]"
-                          name="ProductName" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ShortDescription]"
-                          dataType="wstr"
-                          length="4000"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ShortDescription]"
-                          name="ShortDescription" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[Price]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[Price]"
-                          name="Price" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[OriginalPrice]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[OriginalPrice]"
-                          name="OriginalPrice" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[Discount]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[Discount]"
-                          name="Discount" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[DiscountRate]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[DiscountRate]"
-                          name="DiscountRate" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[QuantitySold]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[QuantitySold]"
-                          name="QuantitySold" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[Rating]"
-                          dataType="r8"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[Rating]"
-                          name="Rating" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ReviewCount]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ReviewCount]"
-                          name="ReviewCount" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[CreateDay]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[CreateDay]"
-                          name="CreateDay" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[UpdateDay]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[UpdateDay]"
-                          name="UpdateDay" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
               </components>
               <paths>
                 <path
@@ -8487,7 +8487,7 @@ ORDER BY
                   refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output3]"
                   endId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort.Inputs[Sort Input]"
                   name="OLE DB Source Output"
-                  startId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS.Outputs[OLE DB Source Output]" />
+                  startId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output2]"
                   endId="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 1.Inputs[Sort Input]"
@@ -8656,9 +8656,21 @@ ORDER BY
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="134,42"
+          Id="Package\DIM_BRAND\Dim_Brand"
+          TopLeft="47.1666666666667,199.222222222222" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\DIM_BRAND\GET LSET, CET BRAND"
+          TopLeft="19,119.25" />
+        <NodeLayout
           Size="162,42"
           Id="Package\DIM_BRAND\Set CET BRAND"
           TopLeft="32.75,28" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\DIM_BRAND\SET LSET"
+          TopLeft="51.5,289.5" />
         <EdgeLayout
           Id="Package\DIM_BRAND.PrecedenceConstraints[Constraint]"
           TopLeft="116.625,70">
@@ -8681,40 +8693,6 @@ ORDER BY
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="201,42"
-          Id="Package\DIM_BRAND\GET LSET, CET BRAND"
-          TopLeft="19,119.25" />
-        <EdgeLayout
-          Id="Package\DIM_BRAND.PrecedenceConstraints[Constraint 3]"
-          TopLeft="116.833333333333,161.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37.9722222222222"
-              Start="0,0"
-              End="0,30.4722222222222">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.4722222222222" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="134,42"
-          Id="Package\DIM_BRAND\Dim_Brand"
-          TopLeft="47.1666666666667,199.222222222222" />
-        <NodeLayout
-          Size="131,42"
-          Id="Package\DIM_BRAND\SET LSET"
-          TopLeft="51.5,289.5" />
         <EdgeLayout
           Id="Package\DIM_BRAND.PrecedenceConstraints[Constraint 1]"
           TopLeft="115.583333333333,241.222222222222">
@@ -8737,69 +8715,47 @@ ORDER BY
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_BRAND.PrecedenceConstraints[Constraint 3]"
+          TopLeft="116.833333333333,161.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.972222222222"
+              Start="0,0"
+              End="0,30.472222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.472222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="272,383"
           Size="272,426"
           Id="Package\DIM_BRAND"
-          TopLeft="346.111111111111,80" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\DIM_PRODUCT\Set CET PRODUCT"
-          TopLeft="30.5833333333335,16.9999999999999" />
-        <EdgeLayout
-          Id="Package\DIM_PRODUCT.PrecedenceConstraints[Constraint 2]"
-          TopLeft="122.458333333333,58.9999999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.25"
-              Start="0,0"
-              End="0,31.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="217,42"
-          Id="Package\DIM_PRODUCT\GET LSET, CET PRODUCT"
-          TopLeft="16.8333333333335,98.2499999999999" />
-        <EdgeLayout
-          Id="Package\DIM_PRODUCT.PrecedenceConstraints[Constraint 1]"
-          TopLeft="127.583333333334,140.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47.9722222222225"
-              Start="0,0"
-              End="0,40.4722222222225">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.4722222222225" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="59.5656565656564,60.7272727272727" />
         <NodeLayout
           Size="143,42"
           Id="Package\DIM_PRODUCT\Dim_Product"
           TopLeft="58.3333333333336,188.222222222222" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\DIM_PRODUCT\GET LSET, CET PRODUCT"
+          TopLeft="16.8333333333335,98.2499999999999" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\DIM_PRODUCT\Set CET PRODUCT"
+          TopLeft="30.5833333333335,16.9999999999999" />
         <NodeLayout
           Size="131,42"
           Id="Package\DIM_PRODUCT\SET LSET"
@@ -8826,13 +8782,61 @@ ORDER BY
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_PRODUCT.PrecedenceConstraints[Constraint 1]"
+          TopLeft="127.583333333334,140.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.9722222222225"
+              Start="0,0"
+              End="0,40.4722222222225">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.4722222222225" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_PRODUCT.PrecedenceConstraints[Constraint 2]"
+          TopLeft="122.458333333333,58.9999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.25"
+              Start="0,0"
+              End="0,31.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="306,380"
           Size="306,423"
           Id="Package\DIM_PRODUCT"
-          TopLeft="782.5,77.5" />
+          TopLeft="495.954545454545,58.2272727272727" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu"
+          TopLeft="51.7777777777784,209.972222222223" />
         <NodeLayout
           Size="257,42"
           Id="Package\FACT_TONGDOANHTHU\GET LSET, CET TONGDOANHTHU"
@@ -8867,10 +8871,6 @@ ORDER BY
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="183,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu"
-          TopLeft="51.7777777777784,209.972222222223" />
         <EdgeLayout
           Id="Package\FACT_TONGDOANHTHU.PrecedenceConstraints[Constraint 1]"
           TopLeft="145.763888888889,251.972222222223">
@@ -8921,10 +8921,10 @@ ORDER BY
           PanelSize="281,394"
           Size="281,437"
           Id="Package\FACT_TONGDOANHTHU"
-          TopLeft="1210,75" />
+          TopLeft="923.454545454546,55.7272727272727" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="618.111111111111,291">
+          TopLeft="331.565656565656,271.727272727273">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8946,7 +8946,7 @@ ORDER BY
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="1088.5,291.25">
+          TopLeft="801.954545454546,271.977272727273">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8975,16 +8975,16 @@ ORDER BY
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="147,42"
-          Id="Package\DIM_BRAND\Dim_Brand\BRAND_NDS"
-          TopLeft="244.5,5.49999999999989" />
-        <NodeLayout
           Size="216,42"
           Id="Package\DIM_BRAND\Dim_Brand\Slowly Changing Dimension"
-          TopLeft="210,107.5" />
+          TopLeft="477,245.5" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\DIM_BRAND\Dim_Brand\BRAND_NDS"
+          TopLeft="511.5,143.5" />
         <EdgeLayout
           Id="Package\DIM_BRAND\Dim_Brand.Paths[OLE DB Source Output]"
-          TopLeft="318,47.4999999999999">
+          TopLeft="585,185.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9007,10 +9007,10 @@ ORDER BY
         <NodeLayout
           Size="165,42"
           Id="Package\DIM_BRAND\Dim_Brand\Insert Destination"
-          TopLeft="5.50000000000006,209.5" />
+          TopLeft="272.5,347.5" />
         <EdgeLayout
           Id="Package\DIM_BRAND\Dim_Brand.Paths[New Output]"
-          TopLeft="266,149.5">
+          TopLeft="533,287.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9047,10 +9047,10 @@ ORDER BY
         <NodeLayout
           Size="173,42"
           Id="Package\DIM_BRAND\Dim_Brand\OLE DB Command"
-          TopLeft="231.5,209.5" />
+          TopLeft="498.5,347.5" />
         <EdgeLayout
           Id="Package\DIM_BRAND\Dim_Brand.Paths[Inferred Member Updates Output]"
-          TopLeft="318,149.5">
+          TopLeft="585,287.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9075,10 +9075,10 @@ ORDER BY
         <NodeLayout
           Size="182,42"
           Id="Package\DIM_BRAND\Dim_Brand\OLE DB Command 1"
-          TopLeft="465,209.5" />
+          TopLeft="732,347.5" />
         <EdgeLayout
           Id="Package\DIM_BRAND\Dim_Brand.Paths[Changing Attribute Updates Output]"
-          TopLeft="370,149.5">
+          TopLeft="637,287.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9115,757 +9115,6 @@ ORDER BY
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <TaskHost
-    design-time-name="Package\DIM_PRODUCT\Dim_Product">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="160,42"
-          Id="Package\DIM_PRODUCT\Dim_Product\DIM_PRODUCT"
-          TopLeft="238,5.49999999999989" />
-        <NodeLayout
-          Size="216,42"
-          Id="Package\DIM_PRODUCT\Dim_Product\Slowly Changing Dimension"
-          TopLeft="210,107.5" />
-        <EdgeLayout
-          Id="Package\DIM_PRODUCT\Dim_Product.Paths[OLE DB Source Output]"
-          TopLeft="318,47.4999999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\DIM_PRODUCT\Dim_Product\Insert Destination"
-          TopLeft="5.50000000000006,209.5" />
-        <EdgeLayout
-          Id="Package\DIM_PRODUCT\Dim_Product.Paths[New Output]"
-          TopLeft="266,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-178,60.0000000000001"
-              Start="0,0"
-              End="-178,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.4878048780488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.4878048780488"
-                    Point2="0,20.4878048780488"
-                    Point3="-4,20.4878048780488" />
-                  <mssgle:LineSegment
-                    End="-174,20.4878048780488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-174,20.4878048780488"
-                    Point2="-178,20.4878048780488"
-                    Point3="-178,24.4878048780488" />
-                  <mssgle:LineSegment
-                    End="-178,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-116.09138671875,25.4878048780488,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="173,42"
-          Id="Package\DIM_PRODUCT\Dim_Product\OLE DB Command"
-          TopLeft="231.5,209.5" />
-        <EdgeLayout
-          Id="Package\DIM_PRODUCT\Dim_Product.Paths[Inferred Member Updates Output]"
-          TopLeft="318,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="182,42"
-          Id="Package\DIM_PRODUCT\Dim_Product\OLE DB Command 1"
-          TopLeft="465,209.5" />
-        <EdgeLayout
-          Id="Package\DIM_PRODUCT\Dim_Product.Paths[Changing Attribute Updates Output]"
-          TopLeft="370,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="186,60"
-              Start="0,0"
-              End="186,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.4878048780488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.4878048780488"
-                    Point2="0,20.4878048780488"
-                    Point3="4,20.4878048780488" />
-                  <mssgle:LineSegment
-                    End="182,20.4878048780488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="182,20.4878048780488"
-                    Point2="186,20.4878048780488"
-                    Point3="186,24.4878048780488" />
-                  <mssgle:LineSegment
-                    End="186,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="14.46609375,25.4878048780488,157.0678125,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="197,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
-          Size="216,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Slowly Changing Dimension"
-          TopLeft="360,821.5" />
-        <NodeLayout
-          Size="147,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\BRAND_DDS"
-          TopLeft="263.5,5.5" />
-        <NodeLayout
-          Size="99,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort"
-          TopLeft="123.5,107.5" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 1"
-          TopLeft="283,107.5" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Merge Join"
-          TopLeft="106.5,209.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output3]"
-          TopLeft="104,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="69.0000000000001,60"
-              Start="0,0"
-              End="69.0000000000001,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="65.0000000000001,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="65.0000000000001,30"
-                    Point2="69.0000000000001,30"
-                    Point3="69.0000000000001,34" />
-                  <mssgle:LineSegment
-                    End="69.0000000000001,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output2]"
-          TopLeft="337,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output4]"
-          TopLeft="173,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-20.8333333333333,60"
-              Start="0,0"
-              End="-20.8333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5720653789004"
-                    Point2="0,35.5720653789004"
-                    Point3="-4,35.5720653789004" />
-                  <mssgle:LineSegment
-                    End="-16.8333333333333,35.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16.8333333333333,35.5720653789004"
-                    Point2="-20.8333333333333,35.5720653789004"
-                    Point3="-20.8333333333333,39.5720653789004" />
-                  <mssgle:LineSegment
-                    End="-20.8333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output1]"
-          TopLeft="337,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-143.166666666667,60"
-              Start="0,0"
-              End="-143.166666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5720653789004"
-                    Point2="0,35.5720653789004"
-                    Point3="-4,35.5720653789004" />
-                  <mssgle:LineSegment
-                    End="-139.166666666667,35.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-139.166666666667,35.5720653789004"
-                    Point2="-143.166666666667,35.5720653789004"
-                    Point3="-143.166666666667,39.5720653789004" />
-                  <mssgle:LineSegment
-                    End="-143.166666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="108,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 2"
-          TopLeft="159,311.5" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_DDS"
-          TopLeft="300.5,209.5" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 3"
-          TopLeft="328,311.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output]"
-          TopLeft="382,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Merge Join 1"
-          TopLeft="142,413.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output5]"
-          TopLeft="213,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-22.3333333333333,60"
-              Start="0,0"
-              End="-22.3333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5988857938719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5988857938719"
-                    Point2="0,35.5988857938719"
-                    Point3="-4,35.5988857938719" />
-                  <mssgle:LineSegment
-                    End="-18.3333333333333,35.5988857938719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.3333333333333,35.5988857938719"
-                    Point2="-22.3333333333333,35.5988857938719"
-                    Point3="-22.3333333333333,39.5988857938719" />
-                  <mssgle:LineSegment
-                    End="-22.3333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output]"
-          TopLeft="382,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-146.666666666667,60"
-              Start="0,0"
-              End="-146.666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5988857938719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5988857938719"
-                    Point2="0,35.5988857938719"
-                    Point3="-4,35.5988857938719" />
-                  <mssgle:LineSegment
-                    End="-142.666666666667,35.5988857938719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-142.666666666667,35.5988857938719"
-                    Point2="-146.666666666667,35.5988857938719"
-                    Point3="-146.666666666667,39.5988857938719" />
-                  <mssgle:LineSegment
-                    End="-146.666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Merge Join Output1]"
-          TopLeft="173,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="40,60"
-              Start="0,0"
-              End="40,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="36,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="36,30"
-                    Point2="40,30"
-                    Point3="40,34" />
-                  <mssgle:LineSegment
-                    End="40,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="108,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 4"
-          TopLeft="245,515.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Merge Join Output2]"
-          TopLeft="213,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="86,60"
-              Start="0,0"
-              End="86,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="82,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="82,30"
-                    Point2="86,30"
-                    Point3="86,34" />
-                  <mssgle:LineSegment
-                    End="86,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="246,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Caculate Revenue &amp; QuantitySold"
-          TopLeft="345,413.5" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 5"
-          TopLeft="414,515.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output1]"
-          TopLeft="468,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Merge Join 2"
-          TopLeft="397,617.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output2]"
-          TopLeft="299,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="146.666666666667,60"
-              Start="0,0"
-              End="146.666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5988857938719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5988857938719"
-                    Point2="0,35.5988857938719"
-                    Point3="4,35.5988857938719" />
-                  <mssgle:LineSegment
-                    End="142.666666666667,35.5988857938719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="142.666666666667,35.5988857938719"
-                    Point2="146.666666666667,35.5988857938719"
-                    Point3="146.666666666667,39.5988857938719" />
-                  <mssgle:LineSegment
-                    End="146.666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output3]"
-          TopLeft="468,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="22.3333333333333,60"
-              Start="0,0"
-              End="22.3333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5988857938719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5988857938719"
-                    Point2="0,35.5988857938719"
-                    Point3="4,35.5988857938719" />
-                  <mssgle:LineSegment
-                    End="18.3333333333333,35.5988857938719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.3333333333333,35.5988857938719"
-                    Point2="22.3333333333333,35.5988857938719"
-                    Point3="22.3333333333333,39.5988857938719" />
-                  <mssgle:LineSegment
-                    End="22.3333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Aggregate"
-          TopLeft="403,719.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Merge Join Output]"
-          TopLeft="468,659.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Aggregate Output 1]"
-          TopLeft="468,761.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Insert Destination"
-          TopLeft="155.5,923.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[New Output]"
-          TopLeft="416,863.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-178,60.0000000000001"
-              Start="0,0"
-              End="-178,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.4878048780488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.4878048780488"
-                    Point2="0,20.4878048780488"
-                    Point3="-4,20.4878048780488" />
-                  <mssgle:LineSegment
-                    End="-174,20.4878048780488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-174,20.4878048780488"
-                    Point2="-178,20.4878048780488"
-                    Point3="-178,24.4878048780488" />
-                  <mssgle:LineSegment
-                    End="-178,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-116.09138671875,25.4878048780488,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="173,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\OLE DB Command"
-          TopLeft="381.5,923.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Inferred Member Updates Output]"
-          TopLeft="468,863.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="182,42"
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\OLE DB Command 1"
-          TopLeft="615,923.5" />
-        <EdgeLayout
-          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Changing Attribute Updates Output]"
-          TopLeft="520,863.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="186,60"
-              Start="0,0"
-              End="186,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.4878048780488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.4878048780488"
-                    Point2="0,20.4878048780488"
-                    Point3="4,20.4878048780488" />
-                  <mssgle:LineSegment
-                    End="182,20.4878048780488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="182,20.4878048780488"
-                    Point2="186,20.4878048780488"
-                    Point3="186,24.4878048780488" />
-                  <mssgle:LineSegment
-                    End="186,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="14.46609375,25.4878048780488,157.0678125,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DIM_BRAND\Dim_Brand\BRAND_NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DIM_BRAND\Dim_Brand\Slowly Changing Dimension">
     <Properties>
@@ -9917,13 +9166,166 @@ ORDER BY
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DIM_PRODUCT\Dim_Product\DIM_PRODUCT">
+    design-time-name="Package\DIM_BRAND\Dim_Brand\BRAND_NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DIM_PRODUCT\Dim_Product">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DIM_PRODUCT\Dim_Product\OLE DB Command 1"
+          TopLeft="465,209.5" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\DIM_PRODUCT\Dim_Product\Slowly Changing Dimension"
+          TopLeft="210,107.5" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\DIM_PRODUCT\Dim_Product\Insert Destination"
+          TopLeft="5.50000000000006,209.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\DIM_PRODUCT\Dim_Product\DIM_PRODUCT"
+          TopLeft="238,5.49999999999989" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\DIM_PRODUCT\Dim_Product\OLE DB Command"
+          TopLeft="231.5,209.5" />
+        <EdgeLayout
+          Id="Package\DIM_PRODUCT\Dim_Product.Paths[Inferred Member Updates Output]"
+          TopLeft="318,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_PRODUCT\Dim_Product.Paths[Changing Attribute Updates Output]"
+          TopLeft="370,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="186,60"
+              Start="0,0"
+              End="186,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4878048780488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4878048780488"
+                    Point2="0,20.4878048780488"
+                    Point3="4,20.4878048780488" />
+                  <mssgle:LineSegment
+                    End="182,20.4878048780488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="182,20.4878048780488"
+                    Point2="186,20.4878048780488"
+                    Point3="186,24.4878048780488" />
+                  <mssgle:LineSegment
+                    End="186,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.46609375,25.4878048780488,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_PRODUCT\Dim_Product.Paths[OLE DB Source Output]"
+          TopLeft="318,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_PRODUCT\Dim_Product.Paths[New Output]"
+          TopLeft="266,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-178,60.0000000000001"
+              Start="0,0"
+              End="-178,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4878048780488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4878048780488"
+                    Point2="0,20.4878048780488"
+                    Point3="-4,20.4878048780488" />
+                  <mssgle:LineSegment
+                    End="-174,20.4878048780488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-174,20.4878048780488"
+                    Point2="-178,20.4878048780488"
+                    Point3="-178,24.4878048780488" />
+                  <mssgle:LineSegment
+                    End="-178,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-116.09138671875,25.4878048780488,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\DIM_PRODUCT\Dim_Product\Slowly Changing Dimension">
     <Properties>
@@ -10047,7 +9449,609 @@ ORDER BY
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\TOTALREVENUE_DDS">
+    design-time-name="Package\DIM_PRODUCT\Dim_Product\DIM_PRODUCT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="147,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\BRAND_DDS"
+          TopLeft="674.611111111111,46.6111111111111" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 4"
+          TopLeft="725,558.833333333333" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_DDS"
+          TopLeft="725.611111111111,247.611111111111" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS"
+          TopLeft="416.611111111111,46.6111111111111" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Merge Join 1"
+          TopLeft="703.111111111111,475.722222222222" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\OLE DB Command"
+          TopLeft="792.611111111111,964.611111111111" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Merge Join 2"
+          TopLeft="808.111111111112,658.611111111111" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Aggregate"
+          TopLeft="814.111111111112,760.611111111111" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Slowly Changing Dimension"
+          TopLeft="771.111111111111,862.611111111111" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 5"
+          TopLeft="1000.66666666667,559.944444444444" />
+        <NodeLayout
+          Size="246,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Caculate Revenue &amp; QuantitySold"
+          TopLeft="929.444444444445,484.611111111111" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort"
+          TopLeft="534.611111111111,148.611111111111" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 3"
+          TopLeft="750.020202020202,366.974747474747" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Insert Destination"
+          TopLeft="566.611111111111,964.611111111111" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\OLE DB Command 1"
+          TopLeft="1026.11111111111,964.611111111111" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 2"
+          TopLeft="570.111111111111,352.611111111111" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Merge Join"
+          TopLeft="517.611111111111,250.611111111111" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\Sort 1"
+          TopLeft="694.111111111111,148.611111111111" />
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Inferred Member Updates Output]"
+          TopLeft="879.111111111112,904.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Changing Attribute Updates Output]"
+          TopLeft="931.111111111112,904.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="186,60"
+              Start="0,0"
+              End="186,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4878048780488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4878048780488"
+                    Point2="0,20.4878048780488"
+                    Point3="4,20.4878048780488" />
+                  <mssgle:LineSegment
+                    End="182,20.4878048780488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="182,20.4878048780488"
+                    Point2="186,20.4878048780488"
+                    Point3="186,24.4878048780488" />
+                  <mssgle:LineSegment
+                    End="186,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.46609375,25.4878048780488,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Aggregate Output 1]"
+          TopLeft="879.111111111112,802.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output5]"
+          TopLeft="624.111111111111,394.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="127.666666666667,81.1111111111111"
+              Start="0,0"
+              End="127.666666666667,73.6111111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.1244196843083" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.1244196843083"
+                    Point2="0,48.1244196843083"
+                    Point3="4,48.1244196843083" />
+                  <mssgle:LineSegment
+                    End="123.666666666667,48.1244196843083" />
+                  <mssgle:CubicBezierSegment
+                    Point1="123.666666666667,48.1244196843083"
+                    Point2="127.666666666667,48.1244196843083"
+                    Point3="127.666666666667,52.1244196843083" />
+                  <mssgle:LineSegment
+                    End="127.666666666667,73.6111111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output4]"
+          TopLeft="584.111111111111,190.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-20.8333333333333,60"
+              Start="0,0"
+              End="-20.8333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5720653789004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5720653789004"
+                    Point2="0,35.5720653789004"
+                    Point3="-4,35.5720653789004" />
+                  <mssgle:LineSegment
+                    End="-16.8333333333333,35.5720653789004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16.8333333333333,35.5720653789004"
+                    Point2="-20.8333333333333,35.5720653789004"
+                    Point3="-20.8333333333333,39.5720653789004" />
+                  <mssgle:LineSegment
+                    End="-20.8333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output3]"
+          TopLeft="1054.66666666667,601.944444444444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-153.222222222222,56.6666666666666"
+              Start="0,0"
+              End="-153.222222222222,49.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.6211699164345" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.6211699164345"
+                    Point2="0,33.6211699164345"
+                    Point3="-4,33.6211699164345" />
+                  <mssgle:LineSegment
+                    End="-149.222222222222,33.6211699164345" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-149.222222222222,33.6211699164345"
+                    Point2="-153.222222222222,33.6211699164345"
+                    Point3="-153.222222222222,37.6211699164345" />
+                  <mssgle:LineSegment
+                    End="-153.222222222222,49.1666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output2]"
+          TopLeft="779,600.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77.7777777777781,57.7777777777777"
+              Start="0,0"
+              End="77.7777777777781,50.2777777777777">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.280408542247" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.280408542247"
+                    Point2="0,34.280408542247"
+                    Point3="4,34.280408542247" />
+                  <mssgle:LineSegment
+                    End="73.7777777777781,34.280408542247" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73.7777777777781,34.280408542247"
+                    Point2="77.7777777777781,34.280408542247"
+                    Point3="77.7777777777781,38.280408542247" />
+                  <mssgle:LineSegment
+                    End="77.7777777777781,50.2777777777777" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output1]"
+          TopLeft="748.111111111111,190.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-143.166666666667,60"
+              Start="0,0"
+              End="-143.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5720653789004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5720653789004"
+                    Point2="0,35.5720653789004"
+                    Point3="-4,35.5720653789004" />
+                  <mssgle:LineSegment
+                    End="-139.166666666667,35.5720653789004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-139.166666666667,35.5720653789004"
+                    Point2="-143.166666666667,35.5720653789004"
+                    Point3="-143.166666666667,39.5720653789004" />
+                  <mssgle:LineSegment
+                    End="-143.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Sort Output]"
+          TopLeft="800.232323232323,408.974747474747">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.7474747474748"
+              Start="0,0"
+              End="0,59.2474747474748">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.2474747474748" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output]"
+          TopLeft="805.565656565657,289.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.3636363636363"
+              Start="0,0"
+              End="0,69.8636363636363">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.8636363636363" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output1]"
+          TopLeft="1053.55555555556,526.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.3333333333333"
+              Start="0,0"
+              End="0,25.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output2]"
+          TopLeft="748.111111111111,88.6111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[OLE DB Source Output3]"
+          TopLeft="498.111111111111,88.6111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86,60"
+              Start="0,0"
+              End="86,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="82,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82,30"
+                    Point2="86,30"
+                    Point3="86,34" />
+                  <mssgle:LineSegment
+                    End="86,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[New Output]"
+          TopLeft="827.111111111112,904.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-178,60.0000000000001"
+              Start="0,0"
+              End="-178,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4878048780488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4878048780488"
+                    Point2="0,20.4878048780488"
+                    Point3="-4,20.4878048780488" />
+                  <mssgle:LineSegment
+                    End="-174,20.4878048780488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-174,20.4878048780488"
+                    Point2="-178,20.4878048780488"
+                    Point3="-178,24.4878048780488" />
+                  <mssgle:LineSegment
+                    End="-178,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-116.09138671875,25.4878048780488,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Merge Join Output2]"
+          TopLeft="776.555555555556,517.722222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.1111111111112"
+              Start="0,0"
+              End="0,33.6111111111112">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.6111111111112" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Merge Join Output1]"
+          TopLeft="584.111111111111,292.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40,60"
+              Start="0,0"
+              End="40,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="36,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36,30"
+                    Point2="40,30"
+                    Point3="40,34" />
+                  <mssgle:LineSegment
+                    End="40,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu.Paths[Merge Join Output]"
+          TopLeft="879.111111111112,700.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\BRAND_DDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_DDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10112,32 +10116,6 @@ ORDER BY
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\BRAND_DDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FACT_TONGDOANHTHU\Fact_TongDoanhThu\PRODUCT_DDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

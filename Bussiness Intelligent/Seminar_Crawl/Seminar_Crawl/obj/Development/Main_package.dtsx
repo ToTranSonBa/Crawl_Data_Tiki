@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{AE99D90B-C085-4C83-BC5B-FFAB3FF6CE6C}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{4454758D-8552-4751-B836-D30AA12BDC37}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -125,31 +125,35 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="191,42"
+          Size="154,42"
           Id="Package\ExcelToSource"
-          TopLeft="466,40" />
+          TopLeft="448.769230769231,30.4615384615385" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\NdsToDds"
+          TopLeft="467.769230769231,357.461538461538" />
         <NodeLayout
           Size="191,42"
           Id="Package\SourceToStage"
-          TopLeft="464,153" />
+          TopLeft="436.769230769231,144.461538461538" />
         <NodeLayout
           Size="140,42"
           Id="Package\StageToNds"
-          TopLeft="494,269" />
+          TopLeft="466.769230769231,260.461538461538" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="560.5,82">
+          TopLeft="529.019230769231,72.4615384615383">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,71"
+              EndConnector="0,72"
               Start="0,0"
-              End="0,63.5">
+              End="0,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,63.5" />
+                    End="0,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -160,7 +164,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="561.75,195">
+          TopLeft="534.519230769231,186.461538461538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -180,13 +184,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="131,42"
-          Id="Package\NdsToDds"
-          TopLeft="495,366" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="562.25,311">
+          TopLeft="535.019230769231,302.461538461538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

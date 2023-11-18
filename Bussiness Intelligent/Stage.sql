@@ -236,11 +236,12 @@ BEGIN
 END
 go
 
-select * from PRODUCT_STAGE
+
 select * from BRAND_STAGE
 select * from CATEGORY_STAGE
 select * from DIRECTORY_STAGE
 select * from STORE_STAGE
+select * from PRODUCT_STAGE
 
 truncate table BRAND_STAGE
 truncate table PRODUCT_STAGE
